@@ -6,11 +6,43 @@
  <h2>Sorting JavaScript Arrays</h2>
  
  <p>Using a function to reverse the names</p>
- <p>Sort y names.</p>
+ <p>Sort the names.</p>
  <button onclick="myFunction()">Click here to sort the names</button>
  
  <p id="app"></p>
  
+ <canvas id="blankCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+ 
+ <script>  
+    var blankCanvas = document.getElementById("blankCanvas").getContext("2d");
+    blankCanvas.font = '20px Calibri';
+     
+    var x = 30;
+    var speedX = 30;
+    var y = 30;
+    var speedY = 10;
+     
+    setInterval(update,500);
+     
+    function update(){
+            x += speedX;
+            y += speedY;
+            blankCanvas.fillText('Hello',x,y);
+            console.log('hello',x);
+           
+            
+
+            if(x > 500){
+                    console.log('Hit the edge');
+            }
+           
+    }
+     
+    
+     
+     
+    </script>
+
  <script src="js/rectangles.js"></script>
  
  </body>
